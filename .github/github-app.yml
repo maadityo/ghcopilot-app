@@ -1,0 +1,25 @@
+instructions: |
+  This is a fictional mining shift-handover UI/UX demo for a first customer meeting.
+  Use the GitHub Copilot desktop app workflow, not VS Code instructions.
+  Keep the prototype small, responsive, keyboard accessible, and clearly labeled fictional.
+  Never introduce real customer data, equipment controls, maintenance advice, external APIs,
+  authentication, telemetry, or production integrations without an explicit scope change.
+  Use npm and preserve the package-lock.json lockfile.
+  Run npm run check after code changes.
+  Open items means Open plus In progress; reuse the existing status filter.
+  Notes are browser-local only. Preserve explicit storage errors and scoped confirmed reset.
+  For Figma demos, follow docs/FIGMA-DEMO.md and use the connected Figma tools.
+  Load available Figma design-to-code guidance before requesting design context.
+  Read only the explicitly linked frames; report missing access instead of inventing designs.
+  Adapt design references to the existing React code and styles, not generated app scaffolds.
+  Figma is an agent-side design reference, never a runtime API dependency.
+  Never store OAuth credentials in this repository or change Figma sharing permissions.
+scripts:
+  - name: Setup
+    command: npm ci
+  - name: Run demo
+    command: npm run dev -- --port 5173 --strictPort
+  - name: Check demo
+    command: npm run check
+server_ready_pattern: 'Local:\s+(https?://\S+)'
+auto_open_in_browser: true
