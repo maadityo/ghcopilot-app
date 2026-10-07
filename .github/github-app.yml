@@ -14,6 +14,9 @@ instructions: |
   Adapt design references to the existing React code and styles, not generated app scaffolds.
   Figma is an agent-side design reference, never a runtime API dependency.
   Never store OAuth credentials in this repository or change Figma sharing permissions.
+  Company themes are website-inspired visual drafts, not approved branding or tenant boundaries.
+  Reuse src/themes.ts semantic tokens and shared components; preserve note and filter state on theme changes.
+  Follow docs/MULTI-BRAND-DEMO.md for source provenance and color accessibility decisions.
 scripts:
   - name: Setup
     command: npm ci

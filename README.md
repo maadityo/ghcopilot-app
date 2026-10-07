@@ -6,6 +6,8 @@ A fictional shift-handover prototype and a complete presenter guide for a **firs
 
 **Figma integration:** [open the editable fictional UX reference](https://www.figma.com/design/Vq8CVHkbb2P86dtsDGAeJ4?node-id=1-2), then follow [the Figma demo steps](docs/FIGMA-DEMO.md). The reference contains active/inactive shortcut designs and acceptance notes. Figma is connected to the agent through MCP, not to the running React application.
 
+**One format, multiple company styles:** use **Visual theme** to switch between the original demo, Petrosea-inspired draft, and Petrindo-inspired draft without changing the layout or losing filters and notes. See [the multi-brand walkthrough and public color sources](docs/MULTI-BRAND-DEMO.md). These are website-inspired drafts, not approved corporate branding or separate company workspaces.
+
 ## Run locally
 
 Use Node.js **22.12 or newer** and npm. These commands also work in the Copilot app's terminal:
@@ -31,6 +33,8 @@ Five fictional equipment records, search combined with status filtering, open-it
 
 Notes are **browser-local**, with one latest note per equipment. Saving replaces that equipment's previous personal note; nothing is sent to a supervisor or another device. Reset clears only the `shiftboard-demo.notes.v1` storage key and resets the screen. Switching equipment with an unsaved draft asks for confirmation; leaving the page with a draft uses the browser's unsaved-change warning.
 
+Changing the visual theme preserves the current data, filters, equipment selection, and draft. It does not switch tenants or isolate company data. Reload and a successful Reset demo return the visual theme to Original demo; no additional theme storage is used.
+
 ## Boundaries
 
 **Fictional demo - not for operational use.** This is not a Petrosea product or a replica of its systems. No Petrosea branding assets, real site or employee data, authentication, maintenance guidance, equipment controls, backend, telemetry, Minerva integration, or cloud deployment.
@@ -45,7 +49,9 @@ The screen is an original, lean React/TypeScript/Vite implementation. The guide 
 | `src/data.ts` | Fictional equipment and combined filtering |
 | `src/notes.ts` | Versioned browser storage and note validation |
 | `src/styles.css` | Responsive industrial-style UI |
+| `src/themes.ts` | Shared semantic palette tokens for the original and two company-inspired drafts |
 | `src/App.test.tsx` | Behavior and failure-path tests |
 | `docs/DEMO-GUIDE.md` | Presenter script, prompts, and repo options |
 | `docs/FIGMA-DEMO.md` | Figma connection checks, frame links, and design-to-code prompts |
+| `docs/MULTI-BRAND-DEMO.md` | One-template brand adaptation case, palette provenance, and Figma variants |
 | `.github/github-app.yml` | Copilot app project instructions and manual scripts |

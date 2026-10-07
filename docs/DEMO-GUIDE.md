@@ -8,6 +8,8 @@ This is a product-team collaboration demo, not a demo of coding autocomplete, VS
 
 **Figma-enabled version:** use [the Figma walkthrough](FIGMA-DEMO.md) between baseline preview and plan approval. It adds an editable design reference for the same small shortcut, not a second feature or a new system. [Open the prepared reference board](https://www.figma.com/design/Vq8CVHkbb2P86dtsDGAeJ4?node-id=1-2).
 
+**Customer case: multiple company identities.** The working screen now has a Visual theme selector. Use [the multi-brand walkthrough](MULTI-BRAND-DEMO.md) to show one shared format adapted from a Petrosea-inspired draft to a Petrindo-inspired draft. This can replace the live shortcut exercise for a simpler conversation. The theme switch is already implemented; do not present it as a change generated live during the meeting.
+
 **Opening talk track**
 
 > "For this first conversation, let's keep it small. Imagine an incoming shift supervisor who wants to find the handover items that still need attention. These are fictional records, not your operations. We'll show how your team could describe one UX improvement, review the plan, and inspect the working result using the GitHub Copilot app."
@@ -25,6 +27,8 @@ Run **Setup** (`npm ci`), then **Check demo** (`npm run check`), then **Run demo
 If the port is occupied, run with a different port and use the printed URL. Keep the same host, port, and browser profile when demonstrating note persistence: localStorage is origin- and profile-specific. Narrowing the browser panel is enough to show the responsive layout.
 
 Confirm these baseline facts: five records, four open handover items, zero personal saved notes after reset, the status dropdown offers "Open items", and no "Open items only" shortcut exists yet. Clear demo notes with **Reset demo** and accept its confirmation. Keep a second local browser preview available if the app preview surface fails.
+
+Reset also restores **Original demo**. Company-inspired palettes are visual drafts only; changing the selector does not change company permissions or data. Return to Original demo for the original shortcut Figma exercise, whose reference uses the original green palette.
 
 Initial installation needs network access. The Copilot agent needs its service connection and appropriate entitlement. Once installed, the local UI can run without a remote data service; this does **not** mean the Copilot agent is offline.
 
@@ -160,6 +164,7 @@ Ask verbally: "Which small screen in your current workflow would be worth improv
 | Isolated worktree sessions | Rehearse or explore without overwriting the saved baseline |
 | Repository instructions and manual scripts | Carry the demo's boundaries and repeatable commands into later sessions |
 | Figma MCP design reference | Discuss the shortcut's active/inactive appearance before implementing it in the existing screen |
+| Shared theme tokens | Adapt one UI format for different company identities without duplicating the handover components |
 
 Figma integration is now a prepared demo option; follow [its connection and access checks](FIGMA-DEMO.md) before presenting. Parallel agents, automations, custom canvases, computer use, and PR lifecycle automation are **not needed for this first meeting**. A PR is an optional later handoff requiring repository permissions and explicit intent, not a necessary live step.
 
