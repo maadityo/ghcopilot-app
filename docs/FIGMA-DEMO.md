@@ -6,6 +6,8 @@
 
 File ini dibuat khusus untuk demo fiktif, dengan teks dan frame yang bisa diedit. Ini **spesifikasi visual shortcut**, bukan salinan aplikasi Petrosea, screenshot seluruh aplikasi, atau prototipe interaktif yang sudah menjalankan logika.
 
+Untuk case satu format bagi beberapa perusahaan, tersedia halaman Figma tambahan dengan [draft Petrosea](https://www.figma.com/design/Vq8CVHkbb2P86dtsDGAeJ4?node-id=3-3) dan [draft Petrindo](https://www.figma.com/design/Vq8CVHkbb2P86dtsDGAeJ4?node-id=3-68). Keduanya memakai geometri template yang sama. Ikuti [MULTI-BRAND-DEMO.md](MULTI-BRAND-DEMO.md); jangan menganggap board shortcut original di bawah ini sebagai brand guide Petrosea.
+
 | Referensi | Link frame |
 | --- | --- |
 | Board dan catatan acceptance | [UX spec, node 1:2](https://www.figma.com/design/Vq8CVHkbb2P86dtsDGAeJ4?node-id=1-2) |

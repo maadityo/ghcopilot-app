@@ -1,6 +1,7 @@
-import { useEffect, useRef, useState, type FormEvent } from 'react'
+import { useEffect, useRef, useState, type CSSProperties, type FormEvent } from 'react'
 import { equipment, filterEquipment, statusFilters, type StatusFilter } from './data'
 import { loadNotes, NOTE_LIMIT, resetNotes, saveNotes, validateNote } from './notes'
+import { isThemeId, themes, type ThemeId } from './themes'
 
 export default function App() {
   const [initial] = useState(loadNotes)
@@ -12,6 +13,12 @@ export default function App() {
   const [draft, setDraft] = useState('')
   const [validation, setValidation] = useState<string | null>(null)
   const [message, setMessage] = useState('')
+  const [themeId, setThemeId] = useState<ThemeId>('demo')
+  const theme = themes[themeId]
+  const themeStyle: CSSProperties & Record<`--brand-${string}`, string> = {}
+  for (const [token, value] of Object.entries(theme.tokens)) {
+    themeStyle[`--brand-${token}`] = value
+  }
   const noteInput = useRef<HTMLTextAreaElement>(null)
   const selected = equipment.find((item) => item.id === selectedId)!
   const visible = filterEquipment(query, status)
@@ -73,13 +80,14 @@ export default function App() {
       setValidation(null)
       setStorageError(null)
       setMessage('Demo reset. Fictional equipment records are unchanged.')
+      setThemeId('demo')
     } catch {
       setStorageError('Could not reset demo notes. Browser storage is unavailable. No screen state was cleared; enable storage and try again.')
     }
   }
 
   return (
-    <div className="app-shell">
+    <div className="app-shell" data-theme={themeId} style={themeStyle}>
       <a className="skip-link" href="#main">Skip to handover</a>
       <aside className="sidebar" aria-label="Demo context">
         <div className="brand" translate="no"><span className="brand-mark" aria-hidden="true">S</span>shiftboard<span className="brand-dot">.</span></div>
@@ -100,6 +108,22 @@ export default function App() {
         </header>
         <main id="main" tabIndex={-1}>
           <div className="demo-banner"><strong>Fictional demo - not for operational use</strong><span>No live data, equipment controls, or shared updates.</span></div>
+          <section className="theme-toolbar" aria-label="Shared template brand preview">
+            <div className="theme-picker">
+              <label htmlFor="theme">Visual theme</label>
+              <select id="theme" name="visual-theme" value={themeId} onChange={(event) => {
+                if (isThemeId(event.target.value)) setThemeId(event.target.value)
+              }} aria-describedby="theme-help">
+                {Object.entries(themes).map(([id, value]) => <option key={id} value={id}>{value.label}</option>)}
+              </select>
+            </div>
+            <div className="theme-description">
+              <p id="theme-help">One template, different brand colors. Visual draft only; the same fictional records and notes stay in view.</p>
+              <p className="theme-feedback" role="status" aria-label="Theme feedback">
+                {theme.label}{theme.source && <> · <a href={theme.source} target="_blank" rel="noreferrer">Public website reference</a> · Not an approved brand guide</>}
+              </p>
+            </div>
+          </section>
           <div className="page-heading">
             <div><p className="eyebrow">NUSANTARA DEMO SITE / DAY TO NIGHT</p><h1>Pass on the context.</h1><p className="subtitle">A simple handover. A better starting point for the next shift.</p></div>
             <button className="button secondary reset-button" onClick={resetDemo}>Reset demo</button>
