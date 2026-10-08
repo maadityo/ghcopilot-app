@@ -141,6 +141,9 @@ export default function App() {
                 <div className="search-field"><label htmlFor="search">Search equipment or issue</label><input id="search" name="equipment-search" type="search" autoComplete="off" spellCheck={false} placeholder="Try HT-208 or workshop" value={query} onChange={(event) => setQuery(event.target.value)} /></div>
                 <div><label htmlFor="status">Issue status</label><select id="status" name="issue-status" autoComplete="off" value={status} onChange={(event) => setStatus(event.target.value as StatusFilter)}>{statusFilters.map((value) => <option key={value}>{value}</option>)}</select></div>
               </div>
+              <button type="button" className="button secondary open-items-shortcut" aria-pressed={status === 'Open items'} onClick={() => setStatus(status === 'Open items' ? 'All' : 'Open items')}>
+                <span>Open items only</span><span className="open-items-count" aria-label={`${openCount} open items across the fictional site`}>{openCount}</span>
+              </button>
               <div className="equipment-list">
                 {visible.length === 0 && <div className="empty-state"><h3>No matching equipment</h3><p>Try another search or change the issue status.</p><button className="button secondary" onClick={() => { setQuery(''); setStatus('All') }}>Clear filters</button></div>}
                 {visible.map((item) => (

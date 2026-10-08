@@ -53,6 +53,11 @@ h1 { font-size: clamp(27px, 3vw, 38px); letter-spacing: -1.4px; font-weight: 600
 h2 { font-size: 20px; letter-spacing: -.5px; font-weight: 600; margin-bottom: 0; }
 .record-count { font-size: 10px; color: #586960; white-space: nowrap; }
 .filters { display: grid; grid-template-columns: minmax(0, 1fr) 145px; gap: 12px; margin-bottom: 16px; }
+.open-items-shortcut { display: inline-flex; align-items: center; flex-wrap: wrap; gap: 10px; max-width: 100%; margin-bottom: 16px; text-align: left; overflow-wrap: anywhere; }
+.open-items-shortcut[aria-pressed="true"] { background: var(--brand-primary); color: white; border-color: var(--brand-primary); }
+.open-items-shortcut[aria-pressed="true"]:hover { background: var(--brand-sidebar); }
+.open-items-count { padding: 3px 7px; border-radius: 4px; background: var(--brand-tint); color: var(--brand-primary); font-variant-numeric: tabular-nums; }
+.open-items-shortcut[aria-pressed="true"] .open-items-count { background: white; }
 label { display: block; font-size: 11px; font-weight: 600; margin-bottom: 7px; }
 input, select, textarea { width: 100%; padding: 11px 12px; background: white; border: 1px solid #b9c8bf; border-radius: 5px; color: #243d3a; font-size: 12px; min-height: 44px; }
 input::placeholder, textarea::placeholder { color: #64746a; opacity: 1; }
