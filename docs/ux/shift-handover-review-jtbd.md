@@ -1,43 +1,42 @@
-# Shift-handover review — JTBD (fictional demo)
+# Tinjauan serah terima sif — JTBD (demo fiktif)
 
-> All people, records, situations, and examples in this artifact are fictional demo material. This is not customer research, and no statements below are validated findings.
+> Semua orang, catatan, situasi, dan contoh dalam artefak ini adalah materi demo fiktif. Ini bukan riset pelanggan, dan tidak ada pernyataan di bawah ini yang merupakan temuan tervalidasi.
 
-## Job statement
+## Pernyataan pekerjaan
 
-When I am reviewing a fictional shift handover and need to find items that are not closed, I want to see and filter the unfinished items and write a browser-local note, so I can review the relevant context in this demo.
+Saat saya meninjau serah terima sif fiktif dan perlu menemukan item yang belum ditutup, saya ingin melihat dan memfilter item yang belum selesai serta menulis catatan yang tersimpan di browser, agar saya dapat meninjau konteks yang relevan dalam demo ini.
 
-## User and context
+## Pengguna dan konteks
 
-- Role: Fictional reviewer of a shift-handover list; the role is not a real or validated customer persona.
-- Context: A fictional list contains five records, four of which are open items. “Open items” means status Open or In progress and excludes Closed. The reviewer can combine the status dropdown/filter with search.
-- Frequency/device/accessibility: Frequency and actual device are unknown. The prototype is viewed in a browser and should support keyboard operation, visible focus, semantic controls, sufficient contrast, and responsive layouts.
-- Notes boundary: Notes persist only in browser local storage and are specific to the browser origin and profile. No shared or cross-device persistence is implied.
+- Peran: Peninjau fiktif daftar serah terima sif; peran ini bukan persona pelanggan nyata atau tervalidasi.
+- Konteks: Daftar fiktif berisi lima entri, empat di antaranya merupakan item terbuka. “Item terbuka” berarti status Open atau In progress, dan tidak mencakup Closed. Peninjau dapat menggabungkan dropdown/filter status dengan pencarian.
+- Frekuensi/perangkat/aksesibilitas: Frekuensi dan perangkat yang sebenarnya belum diketahui. Prototipe dilihat di browser dan sebaiknya mendukung penggunaan dengan keyboard, fokus yang terlihat, kontrol semantis, kontras yang memadai, dan tata letak responsif.
+- Batasan catatan: Catatan hanya tersimpan di penyimpanan lokal browser (localStorage) dan khusus untuk origin serta profil browser tersebut. Tidak ada implikasi bahwa catatan dibagikan atau tersimpan lintas perangkat.
 
-## Current approach and pain points
+## Pendekatan saat ini dan kendala
 
-- Supplied facts:
-  - There are five fictional records and four open items.
-  - Open items includes Open plus In progress and excludes Closed.
-  - The status dropdown/filter and search can be combined.
-  - Notes persist only in browser local storage, specific to the browser origin and profile.
-  - Storage errors must be explicit for blocked, full, or unreadable storage; a failed save must never be described as successful.
-  - Reset clears notes and filters only after confirmation. Cancellation or reset failure does not alter state.
-- Assumptions:
-  - The fictional reviewer may benefit from narrowing the list before reading or writing a note.
-  - A clearly associated note editor may make it easier to understand which fictional record a note belongs to.
-  - The reviewer understands that browser-local notes are personal to the current origin/profile; this needs confirmation in a later review.
-- Open questions:
-  - Who is the intended reviewer in the scenario, and what is their actual goal and context?
-  - What current alternative or workaround do they use, and what pain points have they supplied?
-  - How often would they review items, and what impact would a missed, hidden, or misunderstood item have in the intended demo narrative?
-  - Which device, browser, and accessibility needs should the prototype represent?
-  - What note content and length should the fictional interaction demonstrate, if any?
+- Fakta yang diberikan:
+  - Ada lima entri fiktif dan empat item terbuka.
+  - Item terbuka mencakup Open dan In progress, tetapi tidak mencakup Closed.
+  - Dropdown/filter status dan pencarian dapat digunakan bersamaan.
+  - Catatan hanya tersimpan di penyimpanan lokal browser, khusus untuk origin dan profil browser tersebut.
+  - Kesalahan penyimpanan harus dijelaskan secara eksplisit jika penyimpanan diblokir, penuh, atau tidak dapat dibaca; penyimpanan yang gagal tidak boleh disebut berhasil.
+  - Reset hanya menghapus catatan dan filter setelah dikonfirmasi. Pembatalan atau kegagalan reset tidak mengubah keadaan.
+- Asumsi:
+  - Peninjau fiktif mungkin terbantu dengan mempersempit daftar sebelum membaca atau menulis catatan.
+  - Editor catatan yang kaitannya jelas dengan suatu entri dapat mempermudah pemahaman tentang entri fiktif mana yang dirujuk oleh catatan.
+  - Peninjau memahami bahwa catatan lokal browser hanya tersedia untuk origin/profil saat ini; hal ini perlu dikonfirmasi dalam tinjauan berikutnya.
+- Pertanyaan terbuka:
+  - Siapa peninjau yang dimaksud dalam skenario ini, dan apa tujuan serta konteks mereka sebenarnya?
+  - Alternatif atau cara sementara apa yang mereka gunakan saat ini, dan kendala apa yang mereka sampaikan?
+  - Seberapa sering mereka akan meninjau item, dan apa dampak item yang terlewat, tersembunyi, atau disalahpahami dalam narasi demo yang dimaksud?
+  - Perangkat, browser, dan kebutuhan aksesibilitas apa yang sebaiknya direpresentasikan oleh prototipe?
+  - Konten dan panjang catatan seperti apa yang perlu diperagakan dalam interaksi fiktif ini, jika ada?
 
-## Desired outcomes
+## Hasil yang diinginkan
 
-- The reviewer can distinguish the four fictional open items from the one Closed item.
-- The reviewer can combine status filtering and search and understand when there are no matches.
-- The reviewer can tell which fictional record a note is associated with and whether it was saved in this browser origin/profile.
-- Storage and reset errors are communicated plainly without implying a successful save or reset when one failed.
-- The reviewer can complete the experience with keyboard and assistive technology, at narrow and wide viewport sizes.
-
+- Peninjau dapat membedakan empat item terbuka fiktif dari satu item Closed.
+- Peninjau dapat menggabungkan pemfilteran status dengan pencarian dan memahami saat tidak ada hasil yang cocok.
+- Peninjau dapat mengetahui entri fiktif mana yang terkait dengan suatu catatan dan apakah catatan tersebut tersimpan di origin/profil browser ini.
+- Kesalahan penyimpanan dan reset disampaikan dengan jelas, tanpa menyiratkan penyimpanan atau reset berhasil jika gagal.
+- Peninjau dapat menyelesaikan pengalaman ini dengan keyboard dan teknologi bantu, pada ukuran area pandang sempit maupun lebar.

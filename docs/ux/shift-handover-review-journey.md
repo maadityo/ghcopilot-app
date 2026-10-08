@@ -1,71 +1,71 @@
-# Shift-handover review — User journey (fictional demo)
+# Tinjauan serah terima sif — Perjalanan pengguna (demo fiktif)
 
-> The persona, scenario, reactions, and opportunities below are fictional demo material. They are not customer research or validated findings.
+> Persona, skenario, reaksi, dan peluang di bawah ini adalah materi demo fiktif. Ini bukan riset pelanggan atau temuan tervalidasi.
 
-## Persona and goal
+## Persona dan tujuan
 
-Fictional persona: a reviewer looking through a demo shift-handover list. Their goal is to find unfinished fictional items, narrow the list, and write a browser-local note. The persona and goal are planning assumptions, not a real customer profile.
+Persona fiktif: seorang peninjau yang melihat daftar demo serah terima sif. Tujuannya adalah menemukan item fiktif yang belum selesai, mempersempit daftar, dan menulis catatan yang tersimpan di browser. Persona dan tujuan ini merupakan asumsi perencanaan, bukan profil pelanggan nyata.
 
-## Stages
+## Tahapan
 
-### 1. Arrive at the fictional handover list
-- Does: Opens the demo list containing five fictional records.
-- Thinks: “Which items are still open?”
-- Feels: Not established; any reaction here is hypothetical.
-- Pain point: No supplied evidence of a pain point. A possible discovery question is whether the list makes unfinished status easy to identify.
-- UX opportunity: Make the fictional-record context and status information easy to scan; keep the demo boundary apparent.
+### 1. Membuka daftar serah terima sif fiktif
+- Melakukan: Membuka daftar demo yang berisi lima entri fiktif.
+- Berpikir: “Item mana yang masih terbuka?”
+- Merasa: Belum ditetapkan; reaksi apa pun di sini masih hipotetis.
+- Kendala: Tidak ada bukti kendala yang diberikan. Pertanyaan penelusuran yang mungkin diajukan: apakah daftar memudahkan pengguna mengenali status item yang belum selesai?
+- Peluang UX: Buat konteks entri fiktif dan informasi status mudah dipindai; pastikan batasan demo tetap terlihat.
 
-### 2. Narrow to unfinished items
-- Does: Chooses the status dropdown/filter for Open items, which includes Open and In progress and excludes Closed. May also enter a search term; the two filters can combine.
-- Thinks: “Does this show both open statuses, and can I narrow it further?”
-- Feels: Not established; any reaction here is hypothetical.
-- Pain point: No supplied evidence of a pain point. Filtering that returns no matches could be confusing if the empty state is unclear.
-- UX opportunity: Show the active filters, make the meaning of Open items clear, and distinguish no matches from an empty underlying list.
+### 2. Mempersempit daftar ke item yang belum selesai
+- Melakukan: Memilih dropdown/filter status untuk Item terbuka, yang mencakup Open dan In progress, tetapi tidak mencakup Closed. Pengguna juga dapat memasukkan kata pencarian; kedua filter dapat digabungkan.
+- Berpikir: “Apakah ini menampilkan kedua status terbuka, dan bisakah saya mempersempitnya lagi?”
+- Merasa: Belum ditetapkan; reaksi apa pun di sini masih hipotetis.
+- Kendala: Tidak ada bukti kendala yang diberikan. Hasil tanpa kecocokan dari filter dapat membingungkan jika keadaan kosong tidak dijelaskan dengan baik.
+- Peluang UX: Tampilkan filter yang aktif, jelaskan arti Item terbuka, dan bedakan keadaan tanpa kecocokan dari daftar yang memang kosong.
 
-### 3. Review a matching record
-- Does: Scans matching fictional records and selects one to read its handover context.
-- Thinks: “Am I looking at the record I intended?”
-- Feels: Not established; any reaction here is hypothetical.
-- Pain point: No supplied evidence of a pain point. Ambiguous record selection is a question for prototype review.
-- UX opportunity: Keep record identity and selected context legible, including when the list is filtered.
+### 3. Meninjau entri yang cocok
+- Melakukan: Memindai entri fiktif yang cocok lalu memilih salah satunya untuk membaca konteks serah terimanya.
+- Berpikir: “Apakah ini entri yang saya maksud?”
+- Merasa: Belum ditetapkan; reaksi apa pun di sini masih hipotetis.
+- Kendala: Tidak ada bukti kendala yang diberikan. Pemilihan catatan yang ambigu merupakan pertanyaan untuk peninjauan prototipe.
+- Peluang UX: Pastikan identitas entri dan konteks yang dipilih mudah dikenali, termasuk saat daftar difilter.
 
-### 4. Write a browser-local note
-- Does: Enters a note associated with a selected fictional record and attempts to save it.
-- Thinks: “Was this saved, and where will it be available?”
-- Feels: Not established; any reaction here is hypothetical.
-- Pain point: Storage may be blocked, full, or unreadable; these errors must be explicit. A failed save must not be represented as success.
-- UX opportunity: Associate the editor with the selected record, give an accurate save result, and explain that notes remain only in this browser origin/profile.
+### 4. Menulis catatan yang tersimpan di browser
+- Melakukan: Memasukkan catatan yang terkait dengan entri fiktif terpilih dan mencoba menyimpannya.
+- Berpikir: “Apakah catatan ini tersimpan, dan di mana catatan ini tersedia?”
+- Merasa: Belum ditetapkan; reaksi apa pun di sini masih hipotetis.
+- Kendala: Penyimpanan mungkin diblokir, penuh, atau tidak dapat dibaca; kondisi ini harus dijelaskan secara eksplisit. Kegagalan menyimpan tidak boleh digambarkan sebagai keberhasilan.
+- Peluang UX: Kaitkan editor dengan catatan terpilih, berikan hasil penyimpanan yang akurat, dan jelaskan bahwa catatan hanya tersedia di origin/profil browser ini.
 
-### 5. Reset demo state or leave
-- Does: If choosing Reset, reviews a confirmation before clearing notes and filters. Cancels or proceeds.
-- Thinks: “What will this clear?”
-- Feels: Not established; any reaction here is hypothetical.
-- Pain point: An unclear reset scope could lead to an unintended expectation. No real-user evidence is supplied.
-- UX opportunity: State that reset affects notes and filters only; require confirmation. Cancellation or failure must leave state unchanged and must not claim a reset succeeded.
+### 5. Mereset keadaan demo atau keluar
+- Melakukan: Jika memilih Reset, meninjau konfirmasi sebelum menghapus catatan dan filter. Pengguna membatalkan atau melanjutkan.
+- Berpikir: “Apa saja yang akan dihapus?”
+- Merasa: Belum ditetapkan; reaksi apa pun di sini masih hipotetis.
+- Kendala: Cakupan reset yang tidak jelas dapat menimbulkan ekspektasi yang keliru. Tidak ada bukti dari pengguna nyata.
+- Peluang UX: Nyatakan bahwa reset hanya memengaruhi catatan dan filter; minta konfirmasi. Pembatalan atau kegagalan harus membiarkan keadaan tetap sama dan tidak boleh menyatakan reset berhasil.
 
-## Success signals
+## Indikator keberhasilan
 
-Proposed, unvalidated experience signals:
+Indikator pengalaman yang diusulkan dan belum tervalidasi:
 
-- The reviewer can identify the four open items among five fictional records and understands that Closed is excluded.
-- The reviewer can combine status and search and can tell when the combination has no matching records.
-- The reviewer can identify which record is selected and can understand the note's browser-origin/profile-specific persistence boundary.
-- A storage error is visible and accurately describes a failed or unavailable operation; it does not announce save success.
-- Reset scope is clear, and canceling or failing reset leaves notes and filters unchanged.
-- Keyboard users can reach and operate the same controls, focus remains visible, content reflows responsively, and text/control contrast is sufficient.
+- Peninjau dapat mengenali empat item terbuka di antara lima entri fiktif dan memahami bahwa Closed tidak disertakan.
+- Peninjau dapat menggabungkan filter status dan pencarian serta mengetahui saat tidak ada catatan yang cocok.
+- Peninjau dapat mengenali catatan yang dipilih dan memahami batasan penyimpanan catatan yang khusus untuk origin/profil browser.
+- Kesalahan penyimpanan terlihat dan secara akurat menjelaskan operasi yang gagal atau tidak tersedia; kesalahan tersebut tidak mengumumkan bahwa penyimpanan berhasil.
+- Cakupan reset jelas, dan pembatalan atau kegagalan reset membuat catatan dan filter tetap seperti semula.
+- Pengguna keyboard dapat menjangkau dan menggunakan kontrol yang sama, fokus tetap terlihat, konten menyesuaikan secara responsif, serta kontras teks/kontrol memadai.
 
-## Supplied facts, assumptions, and open questions
+## Fakta yang diberikan, asumsi, dan pertanyaan terbuka
 
-- Supplied facts:
-  - The fictional demo contains five records, four of them open.
-  - Open items includes Open and In progress and excludes Closed; status filtering and search can combine.
-  - Notes persist only in browser local storage for the current origin/profile. Blocked, full, or unreadable storage must be reported explicitly; failed saves are never described as successful.
-  - Reset clears notes and filters only after confirmation. Cancellation or failure leaves state unchanged.
-- Assumptions:
-  - The fictional reviewer selects a record to read its context and access a note editor.
-  - The stages and hypothetical thoughts describe a useful demo journey; none are observed user behavior.
-- Open questions:
-  - What is the intended reviewer’s role, goal, context, current workaround, pain points, and review frequency?
-  - What would the impact of a confusing or failed interaction be in the intended scenario?
-  - Which devices, browsers, and accessibility needs should the prototype represent?
-  - What selection and unsaved-draft behavior is expected when filters change?
+- Fakta yang diberikan:
+  - Demo fiktif berisi lima entri, empat di antaranya berstatus terbuka.
+  - Item terbuka mencakup Open dan In progress, tetapi tidak mencakup Closed; filter status dan pencarian dapat digabungkan.
+  - Catatan hanya tersimpan di penyimpanan lokal browser untuk origin/profil saat ini. Penyimpanan yang diblokir, penuh, atau tidak dapat dibaca harus dilaporkan secara eksplisit; penyimpanan yang gagal tidak boleh disebut berhasil.
+  - Reset hanya menghapus catatan dan filter setelah dikonfirmasi. Pembatalan atau kegagalan tidak mengubah keadaan.
+- Asumsi:
+  - Peninjau fiktif memilih entri untuk membaca konteksnya dan membuka editor catatan.
+  - Tahapan dan pemikiran hipotetis menggambarkan perjalanan demo yang berguna; tidak satu pun merupakan perilaku pengguna yang diamati.
+- Pertanyaan terbuka:
+  - Apa peran, tujuan, konteks, cara sementara yang digunakan saat ini, kendala, dan frekuensi peninjauan peninjau yang dimaksud?
+  - Apa dampak interaksi yang membingungkan atau gagal dalam skenario yang dimaksud?
+  - Perangkat, browser, dan kebutuhan aksesibilitas apa yang sebaiknya direpresentasikan oleh prototipe?
+  - Perilaku seperti apa yang diharapkan terhadap pilihan catatan dan draf yang belum disimpan saat filter berubah?
